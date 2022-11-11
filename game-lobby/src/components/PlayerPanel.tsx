@@ -41,9 +41,9 @@ const PlayerPanel = (props: PlayerPanelProps) => {
   };
  
   return (
-    <div id={props.text} className="player-panel">
-      <h1>{props.text}</h1>
-      <select id="select" onChange={onChange}>
+    <div id={props.text} className="player-panel" style={{width: "100%", height: "100%"}}>
+      <h1 style={{marginTop: "0px", fontFamily: "inherit", fontSize: "30px", textAlign: "center"}}>{props.text}</h1>
+      <select id="select" onChange={onChange} style={{display:"block", margin: "0 auto"}}>
         <option value="none">{value}</option>
  
         {/* map the colors to the options */}

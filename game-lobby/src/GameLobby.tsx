@@ -1,3 +1,4 @@
+import { Box, Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import PlayerPanel from "./components/PlayerPanel";
  
@@ -26,13 +27,71 @@ function GameLobby() {
  
   return (
     <ColorContext.Provider value={{ colors: context, setColors: setContext }}>
-      <div className="App">
-        <h1>Hello World</h1>
-        <PlayerPanel text="Player 1" />
-        <PlayerPanel text="Player 2" />
-        <PlayerPanel text="Player 3" />
-        <PlayerPanel text="Player 4" />
-      </div>
+
+        <Container style={{height: "600px", border: "1px solid black", marginTop: "25px",}}>
+        <h1 style={{margin: "auto", padding: "10px", textAlign: "center"}}>Game Lobby</h1>
+
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "space-around",
+                    alignItems: "center",
+                    margin: "auto",
+                    height: "250px",
+                }}
+            >
+                <Box sx={{ 
+                    display: "flex", 
+                    justifyContent: "space-around", 
+                    border: "1px solid black",
+                    width: "50vh",
+                    height: "50%",
+                }}>
+                    <PlayerPanel text="Player 1" />
+                </Box>
+
+                <Box sx={{ 
+                    display: "flex", 
+                    justifyContent: "space-around", 
+                    border: "1px solid black",
+                    width: "50vh",
+                    height: "50%",
+                }}>
+                        <PlayerPanel text="Player 2" />
+                </Box>
+            </Box>
+
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "space-around",
+                    alignItems: "center",
+                    height: "250px",
+                    margin: "auto",
+                }}
+            >
+                <Box sx={{ 
+                    display: "flex", 
+                    justifyContent: "space-around", 
+                    border: "1px solid black",
+                    width: "50vh",
+                    height: "50%",
+                }}>
+                        <PlayerPanel text="Player 3" />
+                </Box>
+
+                <Box sx={{ 
+                    display: "flex", 
+                    justifyContent: "space-around", 
+                    border: "1px solid black",
+                    width: "50vh",
+                    height: "50%",
+                }}>
+                        <PlayerPanel text="Player 4" />
+                </Box>
+            </Box>
+        </Container>
+      
     </ColorContext.Provider>
   );
 }
