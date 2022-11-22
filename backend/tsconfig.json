@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "../game-lobby/src/firebase.tsx"  ]
 }

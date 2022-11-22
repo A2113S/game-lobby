@@ -1,0 +1,31 @@
+.register {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+  border: black 1px solid;
+}
+.register-textBox {
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.register-btn {
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border: none;
+  color: white;
+  background-color: #0e3572;
+  border-radius: 25px;
+}
+.register div {
+  margin-top: 7px;
+}

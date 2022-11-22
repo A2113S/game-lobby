@@ -1,27 +1,50 @@
-.container{
-    height: 600px;
-    border: 1px solid black;
-    margin-top: 25px;
+.game-lobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 600px;
+  border: 1px solid black;
+  margin-top: 25px;
 }
 
 .header {
-    margin: auto;
-    padding: 10px;
-    text-align: center;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
 }
 
-.outerBox{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: auto;
-    height: 250px;
+.outerBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  height: 250px;
 }
 
-.innerBox{
-    display:flex;
-    justify-content: space-around; 
-    border: 1px solid black;
-    width: 50vh;
-    height: 50%;
+.innerBox {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+  width: 50vh;
+  height: 50%;
+}
+
+.logout-btn {
+  padding: 10px;
+  text-align: center;
+  margin-left: center;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  border: none;
+  color: white;
+  background-color: #0e3572;
+  border-radius: 25px;
 }
