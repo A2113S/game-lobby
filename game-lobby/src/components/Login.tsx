@@ -5,13 +5,17 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import "./Login.css";
 
 function Login() {
+  // set the email and password to empty strings, changeable by the user
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // useAuthState is a hook that returns the user and loading state
   const [user, loading] = useAuthState(auth);
+
+  // useNavigate is a hook that returns a function to navigate to a new route
   const navigate = useNavigate();
   useEffect(() => {
     if (loading) {
-      // maybe trigger a loading screen
       return;
     }
     if (user) navigate("/gamelobby");
