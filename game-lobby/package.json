@@ -46,9 +46,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "ts-loader": "^9.4.1",
-    "webpack-node-externals": "^3.0.0"
   }
 }
