@@ -18,13 +18,12 @@ import {
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyANq2fAzImTKx8rHD4OPGtfIuT-TZJB_y8",
-  authDomain: "game-lobby-50375.firebaseapp.com",
-  projectId: "game-lobby-50375",
-  storageBucket: "game-lobby-50375.appspot.com",
-  messagingSenderId: "788042719673",
-  appId: "1:788042719673:web:c00c575f562b9821cb1668",
-  measurementId: "G-JQ24RXPTX3",
+  apiKey: "AIzaSyCSjIZJCfYJdRy3Koq1bmtab-xNqFarnrc",
+  authDomain: "aethergamelobby.firebaseapp.com",
+  projectId: "aethergamelobby",
+  storageBucket: "aethergamelobby.appspot.com",
+  messagingSenderId: "939939023407",
+  appId: "1:939939023407:web:6b4757f412c5ed3d2cd4da",
 };
 
 const app = initializeApp(firebaseConfig);

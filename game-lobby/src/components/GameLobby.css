@@ -48,3 +48,17 @@
   background-color: #0e3572;
   border-radius: 25px;
 }
+
+.resetBtn {
+  padding: 10px;
+  text-align: center;
+  margin-left: center;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  border: none;
+  color: white;
+  background-color: #0e3572;
+  border-radius: 25px;
+}

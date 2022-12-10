@@ -1,6 +1,6 @@
 import React from "react";
 
-const defaultColors = ["Red", "Blue", "Green", "Yellow"];
+export const defaultColors = ["Red", "Blue", "Green", "Yellow"];
  
 interface contextValue {
   colors: string[];

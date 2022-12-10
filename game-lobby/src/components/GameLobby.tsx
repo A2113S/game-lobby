@@ -6,6 +6,7 @@ import "./GameLobby.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { auth, db, logout } from "../firebase";
+import axios from "axios";
 
 const defaultColors = ["Red", "Blue", "Green", "Yellow"];
 
@@ -26,6 +27,44 @@ function GameLobby() {
   useEffect(() => {
     setContext(defaultColors);
   }, []);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://us-central1-aethergamelobby.cloudfunctions.net/getAllColors"
+      )
+      .then((res: any) => {
+        for (let i = 0; i < res.data.length; i++) {
+          if (res.data[i] != "white") {
+            // remove the existing color from the context
+            setContext((prev) => prev.filter((color) => color != res.data[i]));
+          }
+        }
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  }, []);
+
+  const resetOnClick = () => {
+    axios
+      .post(
+        "https://us-central1-aethergamelobby.cloudfunctions.net/resetColors"
+      )
+      .then((res: any) => {
+        setContext(defaultColors);
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+
+    setContext(defaultColors);
+    // wait for 1 second
+    // then reload the page
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
+  };
 
   return (
     <ColorContext.Provider value={{ colors: context, setColors: setContext }}>
@@ -56,7 +95,13 @@ function GameLobby() {
           </Box>
         </Box>
       </Container>
+      <div className="game-lobby">
+        <button className="resetBtn" onClick={resetOnClick}>
+          Reset
+        </button>
+      </div>
     </ColorContext.Provider>
+    // add a reset button
   );
 }
 
