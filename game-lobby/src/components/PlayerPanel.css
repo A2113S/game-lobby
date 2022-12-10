@@ -1,16 +1,19 @@
-.player-panel{
-    width: 100%;
-    height: 100%;
+.player-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.player-header{
-    margin-top: 0p;
-    font-family: inherit;
-    font-size: 30px;
-    text-align: center;
+.player-header {
+  font-family: inherit;
+  font-size: 30px;
+  text-align: center;
 }
 
-.selectBtn{
-    display: block;
-    margin: 0 auto;
+.selectBtn {
+  display: block;
+  margin: 0 auto;
 }
